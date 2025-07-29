@@ -6,7 +6,7 @@ let historicoPastas = [];
 let pastaAtual = ""; // Para saber qual é a atual
 
 function carregarPasta(folderId = "") {
-  galeria.innerHTML = "<p>Carregando...</p>";
+ galeria.innerHTML = `<p class="carregando">Carregando...</p>`;
 
   fetch(`${API_URL}?folderId=${folderId}`)
     .then(response => {

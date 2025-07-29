@@ -1,70 +1,131 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #f2f2f2;
 }
 
 header {
-    background: #0099cc;
-    color: white;
-    padding: 15px;
+  background: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff004f;
+}
+
+header h1 {
+  color: #ff004f;
+  margin: 0;
+  font-size: 2rem;
+}
+
+body h3{
+    color: #ff004f;
     text-align: center;
+    margin-top: 20px;
 }
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-#galeria {
-    padding: 20px;
+#banner-jogador {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  animation: pulseGX 2.5s infinite;
+}
+#banner-jogador img {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 16px;
+  border: 2px solid #ff004f;
+  background: linear-gradient(135deg, #1a1a1a 60%, #ff004f33 100%);
+  box-shadow: 0 0 30px #ff004f88, 0 0 6px #0fcfff99;
+  filter: drop-shadow(0 0 28px #ff004f99);
+  opacity: 0.4;
 }
 
-h2 {
-    margin-bottom: 15px;
+@keyframes pulseGX {
+  0%, 100% { filter: drop-shadow(0 0 20px #ff004f55);}
+  50% { filter: drop-shadow(0 0 40px #ff004fcc);}
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  color: #999;
+  border-top: 1px solid #ff004f;
 }
 
 button {
-    background: #0099cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: background 0.3s;
+  background: #ff004f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-    background: #0077aa;
+  background: #cc003d;
 }
 
-/* Estilo para cards de pastas */
+#galeria {
+  padding: 20px;
+}
+
+h2 {
+  color: #ff004f;
+  text-align: center;
+}
+
 #galeria > div {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #galeria div > div {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    transition: transform 0.3s;
+  background: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(255, 0, 79, 0.2);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #galeria div > div:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(255, 0, 79, 0.4);
 }
 
-/* Imagens dentro da pasta */
 img {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 /* Grid para imagens */
 #galeria .grid-imagens {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
 }
+
+.carregando {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 16px;
+  border: 2px solid #ff004f;
+  background: linear-gradient(135deg, #1a1a1a 60%, #ff004f33 100%);
+  box-shadow: 0 0 30px #ff004f88, 0 0 6px #0fcfff99;
+  filter: drop-shadow(0 0 28px #ff004f99);
+  opacity: 0.4;
+  text-align: center;
+  font-size: 18px;
+  color: #f2f2f2;
+  padding: 20px;
+  font-family: sans-serif;
+
+}
+
