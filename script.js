@@ -166,6 +166,33 @@ function abrirLightboxIframe(fileId, nome) {
   overlay.appendChild(texto);
   document.body.appendChild(overlay);
 }
+//Cadastro na planilha
+function doPost(e) {
+  try {
+    const dados = JSON.parse(e.postData.contents);
+    const nomeTime = dados.time || "Time_Sem_Nome";
+    const planilha = SpreadsheetApp.openById("1biJ_8jTQs1CGrD7ey7bv5QnBaPwBw5lK_JeXy3fiVCc");
+
+    // Cria uma nova aba com o nome do time (se não existir)
+    let aba = planilha.getSheetByName(nomeTime);
+    if (!aba) {
+      aba = planilha.insertSheet(nomeTime);
+      aba.appendRow(["Técnico", "Jogadores", "Reservas"]);
+    }
+
+    // Coleta os dados
+    const tecnico = dados.tecnico;
+    const jogadores = Object.keys(dados).filter(k => k.startsWith("jogador")).map(k => dados[k]);
+    const reservas = Object.keys(dados).filter(k => k.startsWith("reserva")).map(k => dados[k]);
+
+    // Adiciona linha na aba
+    aba.appendRow([tecnico, jogadores.join(", "), reservas.join(", ")]);
+    return ContentService.createTextOutput("✅ Time cadastrado com sucesso!");
+  } catch (error) {
+    return ContentService.createTextOutput("❌ Erro ao cadastrar: " + error.message);
+  }
+}
+
 
 // Inicializa mostrando a pasta raiz
 carregarPasta();
