@@ -37,11 +37,11 @@ header {
 
 
 header h1 {
-  color: var(--vermelho-perifa);
+  /*color: var(--vermelho-perifa);  */
   margin: 0;
   font-size: 2.6rem;
   letter-spacing: 2px;
-  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+  font-family: 'mebezt', 'Segoe UI', 'Arial', sans-serif;
 }
 
 /* Logo maior e à direita */
@@ -73,7 +73,7 @@ main {
 }
 
 h2, h3, h4 {
-  color: var(--vinho);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   margin-bottom: 13px;
   font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
