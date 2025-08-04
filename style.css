@@ -72,13 +72,18 @@ main {
   margin-bottom: 34px;
 }
 
-h2, h3, h4 {
+h2, h4 {
   color: rgb(255, 255, 255);
   font-weight: bold;
   margin-bottom: 13px;
   font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
 }
-
+h3 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-bottom: 13px;
+  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+}
 a {
   color: var(--branco);
   background: rgba(44, 70, 130, 0.6); /* Opacidade quase total */
@@ -138,3 +143,4 @@ body:after {
   z-index: 0;
 }
 */
+
