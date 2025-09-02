@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perifa7 — Torneio de Futebol Society</title>
+  <meta name="description" content="Perifa7: torneio de futebol society que conecta empresas do Grupo Carrefour e comunidades do entorno. Um dia com esporte, cultura e atividades para toda a família. 19/10/2025." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Perifa7 — Torneio de Futebol Society" />
+  <meta property="og:description" content="Esporte, cultura e integração entre empresas e comunidades. 19/10/2025." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
+  <meta property="og:url" content="https://exemplo.com/perifa7" />
+
+  <!-- SEO: Evento -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Perifa7 — Torneio de Futebol Society",
+    "startDate": "2025-10-19T08:30:00-03:00",
+    "endDate": "2025-10-19T18:00:00-03:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "description": "Torneio de futebol society entre empresas do Grupo Carrefour e as comunidades do entorno, com atividades para toda a família.",
+    "image": ["https://exemplo.com/perifa7/assets/og-cover.jpg"],
+    "location": {
+      "@type": "Place",
+      "name": "Campo a definir",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "[Cidade]",
+        "addressRegion": "[UF]",
+        "addressCountry": "BR"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Perifa7 / Grupo Carrefour",
+      "url": "https://exemplo.com"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --brand: #0a4df0;        /* primária */
+      --brand-2: #0b7dda;      /* destaque */
+      --ink: #0b1324;          /* texto */
+      --muted: #6b7280;        /* texto secundário */
+      --bg: #f7f8fb;           /* fundo */
+      --card: #ffffff;         /* cartões */
+      --accent: #16a34a;       /* sucesso/cta secundário */
+      --radius-xl: 18px;
+      --radius-2xl: 26px;
+      --shadow: 0 10px 30px rgba(2, 6, 23, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+
+    /* Topbar / Nav */
+    header {
+      position: sticky; top: 0; z-index: 60;
+      backdrop-filter: saturate(1.2) blur(8px);
+      background: rgba(255,255,255,.75);
+      border-bottom: 1px solid rgba(2,6,23,.06);
+    }
+    .nav {
+      max-width: 1200px; margin: 0 auto; padding: 14px 20px;
+      display: flex; align-items: center; gap: 18px;
+    }
+    .brand { display:flex; align-items:center; gap:12px; font-weight: 800; letter-spacing:.2px; }
+    .brand .logo {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: radial-gradient(120% 120% at 30% 20%, var(--brand) 0%, var(--brand-2) 55%, #112270 100%);
+      box-shadow: 0 8px 20px rgba(10,77,240,.35);
+    }
+    .nav a { text-decoration: none; color: var(--ink); font-weight: 600; opacity: .85; }
+    .nav a:hover { opacity: 1; }
+    .nav .links { margin-left:auto; display:flex; gap:18px; align-items:center; }
+    .cta { background: var(--brand); color: #fff; padding: 10px 16px; border-radius: 999px; box-shadow: 0 10px 20px rgba(10,77,240,.25); }
+    .cta:hover { background: var(--brand-2); }
+
+    /* Hero */
+    .hero {
+      max-width: 1200px; margin: 0 auto; padding: 56px 20px 32px;
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center;
+    }
+    .badge { display:inline-flex; align-items:center; gap:8px; background:#eaf1ff; color: #1849ff; padding:6px 10px; border-radius: 999px; font-weight:700; font-size: 12px; letter-spacing:.3px; }
+    .hero h1 { font-size: clamp(32px, 5vw, 54px); margin: 10px 0 14px; line-height:1.1; }
+    .hero p { font-size: 18px; color: var(--muted); margin: 0 0 24px; }
+    .hero .actions { display:flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding: 14px 18px; border-radius: 12px; font-weight: 700; text-decoration: none; box-shadow: var(--shadow); border:1px solid rgba(2,6,23,.06); }
+    .btn.primary { background: var(--brand); color:#fff; border-color: transparent; }
+    .btn.primary:hover { background: var(--brand-2); }
+    .btn.secondary { background: #fff; }
+
+    .poster { position: relative; border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/3; background: #dbeafe; }
+    .poster::after { content:""; position:absolute; inset:0; background: radial-gradient(100% 50% at 90% 10%, rgba(255,255,255,.0) 0%, rgba(255,255,255,.6) 100%); }
+    .poster img { width:100%; height:100%; object-fit: cover; display:block; }
+
+    /* Sections */
+    section { padding: 56px 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-title { font-size: clamp(24px, 3.6vw, 36px); margin: 0 0 14px; }
+    .section-sub { color: var(--muted); margin: 0 0 28px; }
+
+    /* Features / Atividades */
+    .features { display:grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .card { background: var(--card); border-radius: var(--radius-xl); padding: 20px; box-shadow: var(--shadow); border:1px solid rgba(2,6,23,.06); }
+    .card h3 { margin: 6px 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    /* Programação */
+    .schedule { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .slot { background: var(--card); border-radius: var(--radius-xl); padding: 16px; border:1px solid rgba(2,6,23,.06); box-shadow: var(--shadow); display:flex; gap:16px; align-items: center; }
+    .hour { font-weight: 800; min-width: 78px; padding: 10px 12px; border-radius: 10px; background: #eef2ff; color: #1d4ed8; text-align:center; }
+
+    /* Galeria */
+    .gallery-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .gallery-grid img { width:100%; height: 180px; object-fit: cover; border-radius: 12px; cursor: pointer; }
+
+    /* Lightbox */
+    .lightbox { position: fixed; inset: 0; background: rgba(2,6,23,.85); display: none; align-items: center; justify-content: center; z-index: 70; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 92vw; max-height: 86vh; border-radius: 16px; }
+    .lightbox .close { position: absolute; top: 16px; right: 16px; background: #fff; border: none; padding: 10px 14px; border-radius: 999px; font-weight: 800; cursor:pointer; }
+
+    /* Revista (PDF) */
+    .magazine { display:grid; grid-template-columns: 1.2fr 1fr; gap: 20px; align-items: center; }
+    .magazine .cover { border-radius: var(--radius-2xl); overflow:hidden; box-shadow: var(--shadow); aspect-ratio: 4/5; background: #e5e7eb; display:flex; align-items:center; justify-content:center; font-weight:800; color:#111827; }
+    .download { display:inline-flex; align-items:center; gap:12px; background: var(--accent); color: #fff; padding: 14px 18px; border-radius: 12px; text-decoration: none; font-weight: 800; box-shadow: 0 10px 20px rgba(22,163,74,.25); }
+    .download:hover { filter: brightness(1.05); }
+
+    /* Local/Mapa */
+    .map { border: 0; width: 100%; height: 360px; border-radius: var(--radius-2xl); box-shadow: var(--shadow); }
+
+    /* Rodapé */
+    footer { background: #0b1020; color: #cbd5e1; padding: 36px 20px; margin-top: 30px; }
+    .foot { max-width: 1200px; margin: 0 auto; display:grid; grid-template-columns: 1fr 1fr; align-items:center; }
+    .foot a { color: #cbd5e1; text-decoration: none; }
+    .legal { font-size: 12px; opacity:.8; }
+
+    /* Responsivo */
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .features { grid-template-columns: 1fr 1fr; }
+      .schedule { grid-template-columns: 1fr; }
+      .magazine { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .foot { grid-template-columns: 1fr; gap: 14px; }
+    }
+    @media (max-width: 560px) {
+      .features { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Navegação principal">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Perifa7</span>
+      </div>
+      <div class="links">
+        <a href="#sobre">Sobre</a>
+        <a href="#atividades">Atividades</a>
+        <a href="#programacao">Programação</a>
+        <a href="#galeria">Fotos</a>
+        <a href="#revista">Revista</a>
+        <a href="#local">Local</a>
+        <a class="cta" href="#inscricao">Inscreva-se</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div>
+        <span class="badge">19 • OUT • 2025 — Domingo</span>
+        <h1>Perifa7 — Conectando Empresas e Comunidades pelo Futebol</h1>
+        <p>No dia <strong>19/10/2025</strong>, participe do <strong>torneio de futebol society</strong> que une colaboradores do <strong>Grupo Carrefour</strong> e as <strong>comunidades do entorno</strong> das lojas. Um dia inteiro de esporte, cultura e atividades para todas as idades.</p>
+        <div class="actions">
+          <a class="btn primary" href="#inscricao">Quero participar</a>
+          <a class="btn secondary" href="#programacao">Ver programação</a>
+        </div>
+      </div>
+      <figure class="poster" aria-label="Imagem destaque do evento">
+        <!-- Substitua a imagem abaixo pelo banner oficial -->
+        <img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?q=80&w=1600&auto=format&fit=crop" alt="Jogo de futebol society ao pôr do sol" />
+      </figure>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre o evento</h2>
+        <p class="section-sub">O <strong>Perifa7</strong> promove integração entre empresas e comunidades por meio do esporte, com um ambiente seguro, acolhedor e divertido para todas as idades. Além do torneio, teremos uma programação completa com cultura, lazer e bem-estar.</p>
+      </div>
+    </section>
+
+    <!-- ATIVIDADES / BENEFÍCIOS -->
+    <section id="atividades">
+      <div class="container">
+        <h2 class="section-title">Atividades para todas as idades</h2>
+        <p class="section-sub">Esporte, cultura e convivência — um dia para curtir com amigos, colegas e família.</p>
+        <div class="features">
+          <div class="card">
+            <h3>⚽ Torneio de Futebol Society</h3>
+            <p>Disputa entre times de empresas do Grupo Carrefour e equipes das comunidades do entorno.</p>
+          </div>
+          <div class="card">
+            <h3>👧 Espaço Kids</h3>
+            <p>Brincadeiras monitoradas e recreação para os pequenos se divertirem com segurança.</p>
+          </div>
+          <div class="card">
+            <h3>🎭 Oficinas Culturais</h3>
+            <p>Atividades interativas, música e apresentações locais ao longo do dia.</p>
+          </div>
+          <div class="card">
+            <h3>🍽️ Área Gastronômica</h3>
+            <p>Comidas e bebidas, com opções para toda a família.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMAÇÃO -->
+    <section id="programacao">
+      <div class="container">
+        <h2 class="section-title">Programação — 19/10/2025</h2>
+        <p class="section-sub">Exemplo de cronograma — ajuste conforme a versão final.</p>
+        <div class="schedule">
+          <div class="slot"><div class="hour">08:30</div><div>Abertura oficial</div></div>
+          <div class="slot"><div class="hour">09:00</div><div>Início dos jogos classificatórios</div></div>
+          <div class="slot"><div class="hour">12:00</div><div>Intervalo com apresentações culturais</div></div>
+          <div class="slot"><div class="hour">14:00</div><div>Semifinais</div></div>
+          <div class="slot"><div class="hour">16:00</div><div>Final do torneio</div></div>
+          <div class="slot"><div class="hour">17:30</div><div>Cerimônia de premiação e encerramento</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA DE FOTOS -->
+    <section id="galeria">
+      <div class="container">
+        <h2 class="section-title">Fotos do evento</h2>
+        <p class="section-sub">Seleção de momentos do Perifa7. Clique para ampliar.</p>
+        <div class="gallery-grid" aria-live="polite">
+          <!-- Substitua as imagens abaixo pelas fotos oficiais. Dica: mantenha proporções variadas para dinamismo visual. -->
+          <img src="https://picsum.photos/id/1011/800/600" alt="Time comemorando gol" />
+          <img src="https://picsum.photos/id/1015/800/600" alt="Familias assistindo ao jogo" />
+          <img src="https://picsum.photos/id/1037/800/600" alt="Crianças no espaço kids" />
+          <img src="https://picsum.photos/id/1025/800/600" alt="Lance decisivo em campo" />
+          <img src="https://picsum.photos/id/1020/800/600" alt="Torcida animada nas arquibancadas" />
+          <img src="https://picsum.photos/id/1040/800/600" alt="Apresentação cultural" />
+          <img src="https://picsum.photos/id/1069/800/600" alt="Área gastronômica" />
+          <img src="https://picsum.photos/id/1056/800/600" alt="Entrega de troféu" />
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização de foto">
+        <button class="close" aria-label="Fechar">✕</button>
+        <img src="" alt="Foto ampliada" />
+      </div>
+    </section>
+
+    <!-- REVISTA (PDF) -->
+    <section id="revista">
+      <div class="container magazine">
+        <div>
+          <h2 class="section-title">Revista Perifa7 (PDF)</h2>
+          <p class="section-sub">Histórias, resultados, entrevistas e registros fotográficos do torneio em uma publicação especial.</p>
+          <!-- Atualize o atributo href para apontar ao arquivo real, ex.: assets/revista-perifa7.pdf -->
+          <a class="download" id="downloadRevista" href="assets/revista-perifa7.pdf" target="_blank" rel="noopener">
+            📖 Baixar revista
+          </a>
+          <p class="section-sub" style="margin-top:12px;font-size:14px;">Tamanho estimado: 15–30 MB • Formato: PDF</p>
+        </div>
+        <div class="cover">
+          <!-- Substitua por uma miniatura da capa da revista -->
+          Capa da Revista
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCAL / MAPA -->
+    <section id="local">
+      <div class="container">
+        <h2 class="section-title">Local</h2>
+        <p class="section-sub">Em breve divulgaremos o endereço completo. Abaixo, um mapa de referência.</p>
+        <!-- Substitua o src do iframe pelo mapa do local oficial (Google Maps > Compartilhar > Incorporar um mapa) -->
+        <iframe class="map" loading="lazy" allowfullscreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.679254473549!2d-46.6565711!3d-23.579235899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c87c6da3d9%3A0x58f4f6f2f0f62f1f!2sParque%20Ibirapuera!5e0!3m2!1spt-BR!2sBR!4v1700000000000!5m2!1spt-BR!2sBR"></iframe>
+      </div>
+    </section>
+
+    <!-- INSCRIÇÃO -->
+    <section id="inscricao">
+      <div class="container">
+        <h2 class="section-title">Inscreva seu time ou participe com a família</h2>
+        <p class="section-sub">Preencha seus dados para receber as orientações e confirmar sua participação.</p>
+        <div class="card" role="form" aria-label="Formulário de inscrição">
+          <!-- Integração rápida: substitua action por seu endpoint (ex.: Google Forms, Typeform, RD Station, HubSpot) -->
+          <form action="#" method="post" onsubmit="event.preventDefault(); alert('Inscrição registrada! (Exemplo)');">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+              <div>
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" required style="width:100%; padding:12px; border-radius:10px; border:1px solid #e5e7eb;" />
+              </div>
+              <div>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required style="width:100%; padding:12px; border-radius:10px; border:1px solid #e5e7eb;" />
+              </div>
+              <div>
+                <label for="telefone">Telefone/WhatsApp</label>
+                <input id="telefone" name="telefone" type="tel" required style="width:100%; padding:12px; border-radius:10px; border:1px solid #e5e7eb;" />
+              </div>
+              <div>
+                <label for="tipo">Como deseja participar?</label>
+                <select id="tipo" name="tipo" required style="width:100%; padding:12px; border-radius:10px; border:1px solid #e5e7eb;">
+                  <option value="">Selecione</option>
+                  <option value="time-empresa">Inscrever time (empresa)</option>
+                  <option value="time-comunidade">Inscrever time (comunidade)</option>
+                  <option value="familia">Participar com a família</option>
+                </select>
+              </div>
+              <div style="grid-column:1/-1;">
+                <label for="obs">Observações</label>
+                <textarea id="obs" name="obs" rows="3" style="width:100%; padding:12px; border-radius:10px; border:1px solid #e5e7eb;"></textarea>
+              </div>
+            </div>
+            <div style="display:flex; gap:12px; margin-top:16px; align-items:center;">
+              <button class="btn primary" type="submit">Enviar inscrição</button>
+              <small style="color:var(--muted)">Ao enviar, você concorda com os <a href="#" style="color:var(--brand)">Termos</a> e a <a href="#" style="color:var(--brand)">Política de Privacidade</a>.</small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>Perifa7</strong><br>
+          <span style="font-size:14px; opacity:.85;">Torneio de Futebol Society</span>
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <a href="#inicio">Início</a> · <a href="#sobre">Sobre</a> · <a href="#galeria">Fotos</a> · <a href="#revista">Revista</a> · <a href="#inscricao">Inscrições</a>
+        <div class="legal" style="margin-top:8px;">© 2025 Perifa7. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll suave para links âncora
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href.length > 1) {
+          const el = document.querySelector(href);
+          if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        }
+      });
+    });
+
+    // Lightbox simples para a galeria
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('img');
+    const closeBtn = lb.querySelector('.close');
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lb.classList.add('open');
+      });
+    });
+    closeBtn.addEventListener('click', () => lb.classList.remove('open'));
+    lb.addEventListener('click', (e) => { if (e.target === lb) lb.classList.remove('open'); });
+
+    // Altere o caminho do PDF se necessário; impede erro se arquivo não existir
+    const pdf = document.getElementById('downloadRevista');
+    pdf.addEventListener('click', (e) => {
+      // Exemplo de verificação simples (opcional). Remova se não desejar.
+      // fetch() sem CORS local pode falhar; mantenha apenas como sinalização visual.
+    });
+  </script>
+</body>
+</html>
