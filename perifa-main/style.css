@@ -1,0 +1,146 @@
+:root {
+  /* Primárias */
+  --azul-perifa: #2F4682;
+  --vermelho-perifa: #2F4682;
+  --branco: #FFFFFF;
+  /* Secundárias */
+  --azul-escuro: #2A3B65;
+  --azul-neutro: #1C2031;
+  --vinho: #6D212A;
+  --preto: #211113;
+  --cinza: #9D9D9E;
+}
+
+/* Fonte-base */
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+  background: var(--azul-perifa);
+  color: var(--branco);
+  min-height: 100vh;
+  /*torcida*/
+  background-image: url('img/torcida.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 24px 32px;
+  background: var(--azul-escuro);
+  /*border-bottom: 5px solid var(--vinho);*/
+}
+
+
+header h1 {
+  /*color: var(--vermelho-perifa);  */
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  font-family: 'mebezt', 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Logo maior e à direita */
+.logo-perifa {
+  height: 85px; /* ajuste para deixar maior */
+  width: auto;
+  border-radius: 12px; /* cantos arredondados, opcional */
+  box-shadow: 0 2px 10px rgba(44,70,130,0.13);
+  background: #fff; /* opcional: destaca se logo for PNG com transparência */
+  padding: 8px 12px; /* opcional: espaço interno */
+  z-index: 10;
+}
+
+
+
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.card {
+  background: rgba(44, 70, 130, 0.6); /* Opacidade quase total */
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(44, 70, 130, 0.14);
+  padding: 24px 34px;
+  margin-bottom: 34px;
+}
+
+h2, h4 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-bottom: 13px;
+  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+}
+h3 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-bottom: 13px;
+  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+}
+a {
+  color: var(--branco);
+  background: rgba(44, 70, 130, 0.6); /* Opacidade quase total */
+  text-decoration: underline;
+  font-weight: 600;
+}
+a:hover {
+  color: var(--vinho);
+}
+
+button, .button-primary {
+  background: var(--azul-perifa);
+  color: var(--branco);
+  border: none;
+  border-radius: 7px;
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.28s;
+  box-shadow: 0 2px 6px rgba(44, 70, 130, 0.12);
+}
+button:hover, .button-primary:hover {
+  background: var(--vinho);
+}
+
+.grid-imagens, #galeria .grid-imagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: var(--azul-neutro);
+  color: var(--cinza);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+#mensagem {
+  font-size: 1.1rem;
+  margin-top: 12px;
+  color: var(--branco);
+}
+
+/* Degradê sutil para facilitar leitura 
+body:after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(44,70,130,0.93) 0%, rgba(44,70,130,0.98) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+*/
+

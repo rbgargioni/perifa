@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Time - Perifa7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900|Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Time</h1>
+    <a href="index.html">
+    <img src="img/logo.png" alt="Logo Perifa7" class="logo-perifa">
+  </a>
+  </header>
+  <main>
+    <section class="card">
+      <form id="formTime">
+        <h2>Inscreva seu time!</h2>
+        <label for="nome">Nome do Time:</label><br>
+        <input required type="text" id="nome" name="nome" style="width:90%;margin-bottom:12px;"><br>
+        <label for="tecnico">Nome do Técnico:</label><br>
+        <input required type="text" id="tecnico" name="tecnico" style="width:90%;margin-bottom:12px;"><br>
+        <label>Jogadores:</label><br>
+        <input type="text" name="jogador1" placeholder="Jogador 1" style="width:80%;"><br>
+        <input type="text" name="jogador2" placeholder="Jogador 2" style="width:80%;"><br>
+        <input type="text" name="jogador3" placeholder="Jogador 3" style="width:80%;"><br>
+        <label>Reservas:</label><br>
+        <input type="text" name="reserva1" placeholder="Reserva 1" style="width:80%;"><br>
+        <input type="text" name="reserva2" placeholder="Reserva 2" style="width:80%;"><br>
+        <br>
+        <button type="submit" class="button-primary">Enviar</button>
+        <div id="mensagem"></div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Perifa7
+  </footer>
+  <script src="cadastro.js"></script>
+</body>
+</html>
