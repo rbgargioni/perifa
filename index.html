@@ -59,6 +59,39 @@
   border-radius: 10px;
 }
 
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Quando a tela for menor que 768px */
+@media (max-width: 768px) {
+  .links {
+    flex-direction: column; /* fica em coluna */
+    align-items: center;    /* centraliza */
+    gap: 10px;
+  }
+
+  .links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    background: #0099cc; /* cor de fundo */
+    border-radius: 5px;
+  }
+}
+
+
   </script>
 
 <link rel="stylesheet" href="style.css">
