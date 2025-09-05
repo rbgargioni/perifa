@@ -19,7 +19,7 @@ function carregarPasta(folderId = "") {
 
       // Título da pasta
       const titulo = document.createElement("h2");
-      titulo.textContent = `📂 ${data.currentFolder}`;
+      titulo.textContent = `PERIFA`;
       titulo.style.textAlign = "center";
       galeria.appendChild(titulo);
 
