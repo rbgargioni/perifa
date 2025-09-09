@@ -142,7 +142,9 @@
     align-items: center;
     gap: 10px;
   }
-
+.videos-wrapper {
+  display: block !important; /* ou inline, grid, initial, unset... */
+}
   .nav .links {
     margin-left: 0;
     flex-direction: column;
@@ -182,6 +184,9 @@
     width: auto;
     gap: 18px;
   }
+.videos-wrapper {
+  display: block !important; /* ou inline, grid, initial, unset... */
+}
   /*.nav .links a {
     padding: 8px 16px;
     font-size: 16px;
