@@ -129,10 +129,11 @@
 .nav .links.open {
   display: flex;
   flex-direction: column;
-  width: 90%;             /* ocupa boa parte, mas deixa margens */
+  width: 90%;            
   gap: 8px;
-  margin: 0 auto;         /* centraliza o menu dentro do nav */
+  margin: 0 auto;        
 }
+
 
 /* Regras específicas para telas menores */
 @media (max-width: 768px) {
@@ -149,21 +150,21 @@
     gap: 8px;
   }
 
-  .nav .links a {
+  /*.nav .links a {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 10px 0;                     /* altura confortável, menos lateral */
-    font-size: 15px;                     /* fonte agradável para mobile */
-    margin: 4px 0;                       /* espaçamento vertical entre botões */
-    border-radius: 12px;                 /* cantos arredondados modernos */
+    padding: 10px 0;                     
+    font-size: 15px;                    
+    margin: 4px 0;                      
+    border-radius: 12px;                
     background: linear-gradient(90deg, var(--brand), var(--brand-2));
     color: #fff;
     box-shadow: 0 3px 12px rgba(10,77,240,0.18);
     font-weight: 600;
     letter-spacing: 0.5px;
     transition: background 0.2s, transform 0.1s;
-  }
+  }*/
 
   .nav .links a:hover,
   .nav .links a:focus {
@@ -181,7 +182,7 @@
     width: auto;
     gap: 18px;
   }
-  .nav .links a {
+  /*.nav .links a {
     padding: 8px 16px;
     font-size: 16px;
     border-radius: 8px;
@@ -195,5 +196,5 @@
   .nav .links a:focus {
     background: var(--brand-2);
     color: #fff;
-  }
+  }*/
 }
