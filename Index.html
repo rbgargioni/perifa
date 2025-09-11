@@ -35,6 +35,7 @@
         <a href="#videos">Videos</a>
         <a href="#revista">Revista</a>
         <a href="#local">Local</a>
+        <a href="#faq">FAQ</a>
        <!-- <a class="cta" href="#inscricao">Inscreva-se</a>-->
       </div>
     </nav>
@@ -44,8 +45,11 @@
     <!-- HERO -->
     <section class="hero" id="inicio">
       <div>
+        <h1>
         <!--<span class="badge">19 • OUT • 2025 — Domingo</span>-->
-        <h1>PERIFA7 — Unindo esporte, saúde, cultura e cidadania.</h1>
+          <span style="color:#003366; font-weight:bold; font-family: Arial, sans-serif;">PERIFA</span>
+          <span style="color:#E30613; font-weight:bold; font-family: Arial, sans-serif;">7</span>
+         Unindo esporte, saúde, cultura e cidadania.</h1>
         <p>No sábado, 18 de outubro, das 08:30 às 17:00, vai rolar o Perifa7, na HD Sports Complex.</p>
         <div class="actions">
          <!-- <a class="btn primary" href="#inscricao">Quero participar</a>-->
@@ -65,15 +69,11 @@
         <p class="section-sub">O <strong>Perifa7</strong> é muito mais do que um torneio de futebol 7. Ele nasce com o propósito de unir <strong>esporte, cultura e cidadania</strong>  em um mesmo espaço, criando oportunidades de convivência entre pessoas <strong>colaboradoras do Grupo Carrefour</strong> e as <strong>comunidades periféricas</strong> de Porto Alegre.
                                Mais do que celebrar a paixão pelo futebol, o evento é um convite para vivermos, juntos, valores como <strong>inclusão social, diversidade, respeito, bem-estar e saúde mental.</strong>
         </p>
-        <div class="video" style="flex:1 1 45%; max-width:560px;">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/clkDc9_7FRo"></iframe>
+       <div class="video2" style="flex:1 1 45%; max-width:560px; margin: 0 auto;">
+               <iframe width="100%" height="315" src="https://www.youtube.com/embed/clkDc9_7FRo"></iframe>
         </div>
       </div>
-      
     </section>
-
-  
-
 
     <!-- ATIVIDADES / BENEFÍCIOS -->
     <section id="atividades">
@@ -187,7 +187,50 @@
       </div>
     </section>
 
-    <!-- INSCRIÇÃO -->
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="faq">
+    
+          <div class="faq-item">
+            <button class="faq-question">📍 O que é o Perifa7?</button>
+            <div class="faq-answer">
+              <p>O torneio será realizado no Centro Esportivo da Cidade, Rua Exemplo, 123.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-question">📍 Onde será o evento?</button>
+            <div class="faq-answer">
+              <p>O torneio será realizado no Centro Esportivo da Cidade, Rua Exemplo, 123.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item">
+            <button class="faq-question">🕒 Qual é o horário de início?</button>
+            <div class="faq-answer">
+              <p>As atividades começam às 9h e vão até 18h.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item">
+            <button class="faq-question">🎟️ Preciso pagar para participar?</button>
+            <div class="faq-answer">
+              <p>Não! O evento é totalmente gratuito e aberto à comunidade.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item">
+            <button class="faq-question">👧 Crianças podem participar?</button>
+            <div class="faq-answer">
+              <p>Sim, teremos um espaço kids com monitores preparados para garantir a diversão dos pequenos.</p>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
     
   </main>
 
@@ -239,6 +282,14 @@
       // Exemplo de verificação simples (opcional). Remova se não desejar.
       // fetch() sem CORS local pode falhar; mantenha apenas como sinalização visual.
     });
+
+      // Abrir/fechar FAQ
+document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.parentElement;
+      item.classList.toggle("active");
+    });
+});
 
     
   </script>

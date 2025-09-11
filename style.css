@@ -186,3 +186,47 @@
     color: #fff;
   }*/
 }
+#faq {
+    padding: 60px 20px;
+    background: #f7f8fb;
+  }
+  .faq {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+  }
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-question::after {
+    content: "+";
+    font-size: 20px;
+  }
+  .faq-item.active .faq-question::after {
+    content: "-";
+  }
+  .faq-answer {
+    display: none;
+    padding: 0 15px 15px;
+    font-size: 15px;
+    color: #444;
+  }
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+  .magazine .cover {
+  aspect-ratio: 4/5;
+  max-width: 70%   /* metade da largura */
+}
