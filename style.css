@@ -226,7 +226,7 @@
   .faq-item.active .faq-answer {
     display: block;
   }
-  .magazine .cover {
+/*  .magazine .cover {
   aspect-ratio: 4/5;
-  max-width: 70%   /* metade da largura */
-}
+  max-width: 70%  
+}*/
