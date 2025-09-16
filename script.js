@@ -1,3 +1,4 @@
+
 const API_URL = "https://script.google.com/macros/s/AKfycbzPf5WIxsPymf5NfXNX4Ch5yAiVt9v6v3zNF71voICa5lP379fK-2A9YNQLkkH-DcuG/exec";
 const galeria = document.getElementById("galeria");
 
@@ -61,17 +62,17 @@ function carregarPasta(folderId = "") {
           previewDiv.style.display = "flex";
           previewDiv.style.gap = "5px";
 
-          if (pasta.preview) {
-            pasta.preview.slice(0, 3).forEach(url => {
-              const thumb = document.createElement("img");
-              thumb.src = url;
-              thumb.style.width = "60px";
-              thumb.style.height = "60px";
-              thumb.style.objectFit = "cover";
-              thumb.style.borderRadius = "4px";
-              previewDiv.appendChild(thumb);
-            });
-          }
+         if (pasta.preview) {
+           pasta.preview.slice(0, 3).forEach(url => {
+             const thumb = document.createElement("img");
+             thumb.src = url;
+             thumb.style.width = "60px";
+             thumb.style.height = "60px";
+             thumb.style.objectFit = "cover";
+             thumb.style.borderRadius = "4px";
+             previewDiv.appendChild(thumb);
+           });
+         }
 
           card.appendChild(nome);
           card.appendChild(previewDiv);
@@ -165,32 +166,6 @@ function abrirLightboxIframe(fileId, nome) {
   overlay.appendChild(iframe);
   overlay.appendChild(texto);
   document.body.appendChild(overlay);
-}
-//Cadastro na planilha
-function doPost(e) {
-  try {
-    const dados = JSON.parse(e.postData.contents);
-    const nomeTime = dados.time || "Time_Sem_Nome";
-    const planilha = SpreadsheetApp.openById("1biJ_8jTQs1CGrD7ey7bv5QnBaPwBw5lK_JeXy3fiVCc");
-
-    // Cria uma nova aba com o nome do time (se não existir)
-    let aba = planilha.getSheetByName(nomeTime);
-    if (!aba) {
-      aba = planilha.insertSheet(nomeTime);
-      aba.appendRow(["Técnico", "Jogadores", "Reservas"]);
-    }
-
-    // Coleta os dados
-    const tecnico = dados.tecnico;
-    const jogadores = Object.keys(dados).filter(k => k.startsWith("jogador")).map(k => dados[k]);
-    const reservas = Object.keys(dados).filter(k => k.startsWith("reserva")).map(k => dados[k]);
-
-    // Adiciona linha na aba
-    aba.appendRow([tecnico, jogadores.join(", "), reservas.join(", ")]);
-    return ContentService.createTextOutput("✅ Time cadastrado com sucesso!");
-  } catch (error) {
-    return ContentService.createTextOutput("❌ Erro ao cadastrar: " + error.message);
-  }
 }
 
 
