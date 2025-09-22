@@ -293,6 +293,20 @@ document.querySelectorAll(".faq-question").forEach(btn => {
     });
 });
 
+  // Seleciona todas as imagens do carrossel
+  const images = document.querySelectorAll(".carousel img");
+  let index = 0;
+
+  // Mostra a primeira imagem
+  images[index].classList.add("active");
+
+  // Troca a cada 5 segundos
+  setInterval(() => {
+    images[index].classList.remove("active");
+    index = (index + 1) % images.length; // vai voltando ao início
+    images[index].classList.add("active");
+  }, 5000);
+
     
   </script>
   <script src="script.js"></script>
