@@ -247,3 +247,27 @@
   aspect-ratio: 4/5;
   max-width: 70%  
 }*/
+
+  .poster {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* ajuste conforme necessário */
+    height: 350px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .carousel img.active {
+    opacity: 1;
+  }
