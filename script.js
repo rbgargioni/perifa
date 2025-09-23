@@ -1,5 +1,5 @@
 
-const API_URL = "https://script.google.com/macros/s/AKfycbzPf5WIxsPymf5NfXNX4Ch5yAiVt9v6v3zNF71voICa5lP379fK-2A9YNQLkkH-DcuG/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwQVGigTT-toJR0eDw1A65OD2_j9_Oy_hdjd4AQ3Il3G6EvM6iuas2f8Jlfl7jQ0tjM6Q/exec";
 const galeria = document.getElementById("galeria");
 
 // Histórico para navegação
