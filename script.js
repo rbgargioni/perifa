@@ -121,6 +121,8 @@ function carregarPasta(folderId = "") {
     });
 }
 
+
+
 // Função para abrir modal com iframe do preview Google Drive
 function abrirLightboxIframe(fileId, nome) {
   const overlay = document.createElement("div");
