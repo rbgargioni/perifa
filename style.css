@@ -86,7 +86,8 @@
     .hour {  font-weight: 800;  min-width: 78px;  padding: 10px 12px;  border-radius: 10px;  background: #eef2ff;  color: #1d4ed8;  text-align: center;}
 
 .logo-strip {
-  width: 70%;
+  max-width: 1440px;
+  width: 100%;
   height: 110px;
   background: #fff;
   display: flex;
