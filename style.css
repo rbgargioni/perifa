@@ -257,6 +257,9 @@
     margin-left: none;
     margin-right: none;
   }
+   .logo-strip-container {
+    display: none;
+  }
 }
 
 
