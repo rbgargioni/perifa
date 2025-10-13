@@ -73,10 +73,24 @@
     .card h3 { margin: 6px 0 8px; font-size: 18px; }
     .card p { margin: 0; color: var(--muted); font-size: 14px; }
 
-    /* Programação */
+    /* Programação 
     .schedule { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .slot { background: var(--card); border-radius: var(--radius-xl); padding: 16px; border:1px solid rgba(2,6,23,.06); box-shadow: var(--shadow); display:flex; gap:16px; align-items: center; }
-    .hour { font-weight: 800; min-width: 78px; padding: 10px 12px; border-radius: 10px; background: #eef2ff; color: #1d4ed8; text-align:center; }
+    .hour { font-weight: 800; min-width: 78px; padding: 10px 12px; border-radius: 10px; background: #eef2ff; color: #1d4ed8; text-align:center; }*/
+    /* Programação */
+    .schedule { display: grid; grid-template-columns: 1fr 1fr; /* duas colunas (manhã/tarde) */ gap: 16px;}
+    /* Cada "slot" (horário) */
+    .slot {  background: var(--card);  border-radius: var(--radius-xl);  padding: 16px;  border: 1px solid rgba(2, 6, 23, 0.06);  box-shadow: var(--shadow);  display: flex; margin: 10px; gap: 16px;  align-items: center;}
+
+    /* Horário destacado */
+    .hour {  font-weight: 800;  min-width: 78px;  padding: 10px 12px;  border-radius: 10px;  background: #eef2ff;  color: #1d4ed8;  text-align: center;}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .schedule {
+    grid-template-columns: 1fr; /* apenas uma coluna */
+  }
+}
 
     /* Galeria */
     .gallery-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
@@ -268,7 +282,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .carousel img.active {
   opacity: 1;
