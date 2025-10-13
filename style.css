@@ -89,11 +89,15 @@
     .texto-video-container { display: flex; align-items: center;  justify-content: space-between;  gap: 30px;  flex-wrap: wrap; /* Permite empilhar em telas pequenas */}
     .texto {  flex: 1 1 50%;}
     .video2 {  flex: 1 1 45%;  max-width: 560px;}
-    .video2 iframe {  width: 100%;  height: 315px; }
+.video2 .video-wrapper {  position: relative;  width: 100%;  aspect-ratio: 16 / 9;  overflow: hidden;  border-radius: 12px;}
 
+.video2 .video-wrapper iframe {  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 100%;  border: 0;}
+    
     /* Vídeos */
+    .video {  border-radius: 12px;  overflow: hidden; flex: 1 1 45%;  max-width: 560px;  height: 300px; /* ou a altura que você quiser */}
     .video-wrapper { position: relative;  width: 100%;  aspect-ratio: 16 / 9; /* Mantém formato de vídeo */  overflow: hidden;  border-radius: 12px;}
     .video-wrapper iframe {  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 100%;  border: 0;}
+    
 
 
     /* Galeria */
@@ -207,8 +211,29 @@
     text-align: justify;
   }
 
-  .video2 {
+    .video2 {
+    width: 100%;
     max-width: 100%;
+    min-height: 200px; /* Garante altura mínima visível */
+    height: auto;
+  }
+  .video2 .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    min-height: 200px; /* Garante espaço para o vídeo */
+    height: auto;
+    display: block;
+  }
+
+  .video{
+    width: 100%;
+    aspect-ratio: 16/9;
+    min-height: 200px; /* Garante espaço para o vídeo */
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    margin-left: none;
+    margin-right: none;
   }
 }
 
