@@ -356,6 +356,13 @@
 .carousel img.active {
   opacity: 1;
 }
+.carousel img[src$=".svg"] {
+  object-fit: contain;
+  background: #fff; /* para svg transparente */
+  padding: 20px;    /* ajuste para dar margem interna */
+  box-sizing: border-box;
+}
+
 
 @media (max-width: 600px) {
   .poster {
