@@ -262,15 +262,6 @@
     display: none;
   }
 
-    .pimagens {
-    min-height: auto;
-    max-width: 100%;
-    padding: 0px 0px;
-  }
-  .pimagens > section {
-    grid-template-columns: 1fr; /* Uma coluna apenas no mobile */
-    gap: 10px;
-  }
 }
 
 
@@ -395,20 +386,6 @@
   width: 100%;
 }
 
-.pimagens {
-  min-height: 60vh;
-  width: 100%;
-  max-width: 1200px;      /* Limita a largura máxima da galeria */
-  margin: 0 auto;         /* Centraliza horizontalmente */
-  padding: 40px 16px;     /* Padding leve em todas as laterais para respiro */
-  box-sizing: border-box; /* Garante que padding conte na largura */
-}
 
-.pimagens > section {
- 
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Responsivo */
-  gap: 24px;
-  width: 100%;
-}
 
 
