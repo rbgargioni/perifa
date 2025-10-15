@@ -385,17 +385,20 @@
   width: 100%;
 }
 
-
 .pimagens {
-
-
-
-  min-height: 60vh;          /* Altura mínima maior para seção */
-
-  padding: 10% 0 0 15%;
+  min-height: 60vh;
+  width: 100%;
+  max-width: 1200px;      /* Limita a largura máxima da galeria */
+  margin: 0 auto;         /* Centraliza horizontalmente */
+  padding: 40px 16px;     /* Padding leve em todas as laterais para respiro */
+  box-sizing: border-box; /* Garante que padding conte na largura */
 }
-.pimagens > * {
-  max-width: 900px;    /* Ajusta largura máxima do conteúdo interno */
+
+.pimagens > section {
+ 
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Responsivo */
+  gap: 24px;
   width: 100%;
 }
+
 
