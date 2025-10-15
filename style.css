@@ -265,7 +265,7 @@
     .pimagens {
     min-height: auto;
     max-width: 100%;
-    padding: 16px 4px;
+    padding: 0px 0px;
   }
   .pimagens > section {
     grid-template-columns: 1fr; /* Uma coluna apenas no mobile */
