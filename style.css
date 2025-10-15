@@ -370,3 +370,32 @@
     margin-right: auto;
   }
 }
+
+.pvideos {
+  display: flex;
+  justify-content: center;   /* Centraliza horizontalmente */
+  align-items: center;       /* Centraliza verticalmente */
+  min-height: 60vh;          /* Altura mínima maior para seção */
+  width: 100%;
+  padding: 40px 0;
+}
+
+.pvideos > * {
+  max-width: 900px;    /* Ajusta largura máxima do conteúdo interno */
+  width: 100%;
+}
+
+
+.pimagens {
+
+
+
+  min-height: 60vh;          /* Altura mínima maior para seção */
+
+  padding: 10% 0 0 15%;
+}
+.pimagens > * {
+  max-width: 900px;    /* Ajusta largura máxima do conteúdo interno */
+  width: 100%;
+}
+

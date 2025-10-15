@@ -21,18 +21,34 @@ function carregarPastaVideos(folderId = "1vpJkpgNWbIG4q7e951GNZWsm0ACZcbzy") {
 
       const divVideos = document.createElement("div");
       divVideos.style.display = "grid";
-      divVideos.style.gridTemplateColumns = "repeat(auto-fill, minmax(200px, 1fr))";
-      divVideos.style.gap = "15px";
+      divVideos.style.gridTemplateColumns = "repeat(auto-fit, minmax(340px, 1fr))";
+      divVideos.style.gap = "20px";
+      divVideos.style.justifyItems = "center";
+      divVideos.style.padding = "10px";
 
       videos.forEach(video => {
+        // Wrapper para forçar relação de aspecto e centralização
+        const wrapper = document.createElement("div");
+        wrapper.style.position = "relative";
+        wrapper.style.width = "100%";
+        wrapper.style.maxWidth = "400px";
+        wrapper.style.aspectRatio = "16/9";
+        wrapper.style.background = "#222";
+        wrapper.style.borderRadius = "10px";
+        wrapper.style.overflow = "hidden";
+        wrapper.style.display = "flex";
+        wrapper.style.alignItems = "center";
+        wrapper.style.justifyContent = "center";
+
         const iframe = document.createElement("iframe");
         iframe.src = `https://drive.google.com/file/d/${video.id}/preview`;
         iframe.style.width = "100%";
-        iframe.style.height = "150px";
+        iframe.style.height = "100%";
         iframe.style.border = "none";
-        iframe.style.borderRadius = "8px";
         iframe.title = video.name;
-        divVideos.appendChild(iframe);
+
+        wrapper.appendChild(iframe);
+        divVideos.appendChild(wrapper);
       });
 
       galeria.appendChild(divVideos);
@@ -43,5 +59,4 @@ function carregarPastaVideos(folderId = "1vpJkpgNWbIG4q7e951GNZWsm0ACZcbzy") {
     });
 }
 
-// Inicializa carregando a pasta de vídeos padrão
 carregarPastaVideos();
