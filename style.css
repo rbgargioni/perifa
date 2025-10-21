@@ -337,15 +337,19 @@ footer {
     display: block;
   }
 
-  .video{
-    width: 100%;
-    aspect-ratio: 16/9;
-    min-height: 200px; /* Garante espaço para o vídeo */
-    height: auto;
+  .video {
+    width: 100% !important;
+    max-width: 430px !important;
+    min-width: 220px !important;
+    margin: 10% auto auto 2% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
+    .video iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
     display: block;
-    margin-bottom: 1rem;
-    margin-left: none;
-    margin-right: none;
   }
    .logo-strip-container {
     display: none;
